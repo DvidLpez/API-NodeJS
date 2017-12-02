@@ -1,4 +1,4 @@
-##API RESTful NodeJS MongoDB
+## API RESTful NodeJS MongoDB
 
 ### Creación de una API donde realiza:
 * Registro de usuarios
