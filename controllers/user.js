@@ -24,7 +24,6 @@ function registroUser(req, res){
 
     // Recoger parámetros petición
     var params = req.body;
-
     // Asignar valores al usuario se pueden validar pero no es el caso
     if (params.nombre && params.apellidos && params.email && params.password) {
 
@@ -89,7 +88,7 @@ function loginUser(req, res){
                             });
 
                         } else {
-                            res.status(200).send({user});
+                            res.status(200).send({user,});
                         }
 
                     } else {
@@ -194,8 +193,6 @@ function getUsers(req, res){
         }
     });
 }
-
-
 
 // Exportamos los metodos del controlador
 module.exports = {

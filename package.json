@@ -1,5 +1,5 @@
 {
-  "name": "Login con Token",
+  "name": "login_con_token",
   "version": "1.0.0",
   "description": "Api RESTful",
   "main": "index.js",

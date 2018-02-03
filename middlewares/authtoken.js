@@ -8,7 +8,7 @@ var pass = 'Esto no lo sabe nadie ya que solo es para el token';
 exports.ensureAuth = function(req, res, next){
 
     if (!req.headers.authorization) {
-        return res.status(403).send({Mesaje:'la peticion no tiene la cabecera de atutenticacion'});
+        return res.status(403).send({Mesaje:'la peticion no tiene la cabecera de auttenticacion, falta logearse para generar token'});
     }
 
     var token = req.headers.authorization.replace(/['"]+/g, '');

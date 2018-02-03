@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Configurar cabeceras y cors
 // En sí es un middleware
 app.use( (req, res, next)=>{
-    // Configurarcion de las cabeceras necesarias
+    // Configurarcion de las cabeceras necesarias para el acceso ajax desde el frontend
 
     // cabecera de acceso
     res.header('Access-Control-Allow-Origin', '*');
@@ -35,9 +35,11 @@ app.use( (req, res, next)=>{
 
 //cargar rutas de la API
 var user_routes = require('./routes/user');
+var coche_routes = require('./routes/coche');
 
 // rutas base
 app.use('/api', user_routes);
+app.use('/api', coche_routes);
 
 // Exportamos el modulo APP
 module.exports = app;
