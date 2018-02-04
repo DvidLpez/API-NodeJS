@@ -24,7 +24,7 @@ app.use( (req, res, next)=>{
     // cabecera de acceso
     res.header('Access-Control-Allow-Origin', '*');
     // permite las siguientes cabeceras
-    res.header('Access-Control-Allow-Headeres, Authorization, X-APY-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Headers','Authorization, X-APY-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
     // metodos http permitidos
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     // pasar metodos en claro
