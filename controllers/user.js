@@ -67,7 +67,6 @@ function registroUser(req, res){
 function loginUser(req, res){
 
     var params = req.body;
-
     var email = params.email;
     var pass = params.password;
 
@@ -92,11 +91,11 @@ function loginUser(req, res){
                         }
 
                     } else {
-                        res.status(404).send({Mensaje: 'El usuario no se puede logear'});
+                        res.status(404).send({Mensaje: 'Verifique nombre o contraseña'});
                     }
                 });
             } else {
-                res.status(404).send({Mensaje: 'El usuario no ha podido logearse'});
+                res.status(404).send({Mensaje: 'Primero debe registrare'});
             }
         }
     });
@@ -106,6 +105,7 @@ function actualizarUser(req, res){
 
     var userId = req.params.id;
     var update = req.body;
+    delete update.password;
 
     if (userId != req.user.sub) {
         return res.status(500).send({Mensaje: 'no tienes permisos'});

@@ -3,6 +3,7 @@
 var jwt = require('jwt-simple');
 var moment = require('moment');
 
+// La clave debe de ser la misma que en el middleware authtoken
 var clave = 'Esto no lo sabe nadie ya que solo es para el token';
 
 exports.createToken = function(user){
